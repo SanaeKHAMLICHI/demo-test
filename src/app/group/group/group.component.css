@@ -1,0 +1,27 @@
+
+.button-add {
+  background-color:#8E0A31 !important;
+  color: white !important;
+}
+button{
+  text-align: center;
+}
+
+
+.mat-mdc-button:not(:disabled) {
+  color:  #8B0000 ;
+}
+.mat-mdc-button>.mat-icon{
+  font-size: 40px;
+  width: 100px;
+  height: 40px;
+
+}
+.btn-edit{
+  background-color:white !important;
+  margin-left:20px;
+}
+
+
+
+

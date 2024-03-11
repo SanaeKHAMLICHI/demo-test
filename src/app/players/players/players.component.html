@@ -1,0 +1,52 @@
+<header>
+  <button mat-fab   routerLink="./newPlayer" extended>
+    <mat-icon>add</mat-icon>
+    Nouveau Joueur
+  </button>
+  <div class="title-container">
+    <h1>{{team?.libelle}}</h1>
+  </div>
+  <button mat-icon-button (click)="goBack()" class="right-side-icon">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</header>
+<div class="center-container">
+
+  <div class="container mat-elevation-z8">
+    <mat-table #table [dataSource]="players">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Nom du Joueur </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span>{{element.libelle}}</span>
+        </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="poste">
+        <mat-header-cell *matHeaderCellDef> Poste </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.poste}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="clubName">
+        <mat-header-cell *matHeaderCellDef> Nom du Club </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.clubName}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="icon">
+        <mat-header-cell *matHeaderCellDef> Actions</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button class="btn-edit" mat-icon-button  routerLink="./player/{{element._id}}/editPlayer">
+            <mat-icon aria-label="Modifier">edit</mat-icon>
+          </button>
+          <button class="btn-edit" mat-icon-button (click)="onDelete(element._id)">
+            <mat-icon aria-label="Modifier">delete</mat-icon>
+          </button>
+
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

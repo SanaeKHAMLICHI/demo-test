@@ -1,0 +1,37 @@
+
+
+<div class="background">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Modification de Mot de passe</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+          <mat-form-field appearance="outline">
+            <mat-label>Prénom</mat-label>
+            <input matInput formControlName="firstName" placeholder="Entrez votre Prénom" type="text">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input matInput formControlName="lastName" placeholder="Entrez votre Nom" type="text">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Entrez votre email" type="email">
+          </mat-form-field>
+          <div class="button">
+            <button mat-raised-button type="submit">Modifier</button>
+          </div>
+
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+ssh-keygen -t ed25519 -b 4096 -C "skhamlichi@dev-id.fr" -f ssh-sanae-mac
+ssh-add ~/ssh-sanae-mac
+Host bitbucket.org
+AddKeysToAgent yes
+IdentityFile ~/.ssh/ssh-sanae-mac
+

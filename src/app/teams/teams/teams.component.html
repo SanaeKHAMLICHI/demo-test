@@ -1,0 +1,57 @@
+
+    <header>
+      <button mat-fab extended routerLink="./newTeam">
+        <mat-icon>add</mat-icon>
+        Nouvelle équipe
+      </button>
+      <div class="title-container">
+        <h1>
+          {{group?.libelle}}
+          <button class="btn-edit-group" mat-icon-button routerLink="./edit-group">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </h1>
+      </div>
+      <button mat-icon-button (click)="goBack()" class="right-side-icon">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </header>
+    <div class="center-container">
+      <div class="container mat-elevation-z8">
+        <mat-table #table [dataSource]="teams">
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Equipe </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+             {{element.libelle}}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="flagUrl">
+            <mat-header-cell *matHeaderCellDef> Drapeau</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <img [src]="element.flagUrl" alt="{{ element.libelle }}" class="flag">
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="icon">
+            <mat-header-cell *matHeaderCellDef> Actions</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <button class="btn-edit" mat-icon-button [routerLink]="['./team', element._id]">
+                <mat-icon aria-label="Visualiser">visibility</mat-icon>
+              </button>
+              <button class="btn-edit" mat-icon-button [routerLink]="['./team', element._id, 'editTeam']">
+                <mat-icon aria-label="Modifier">edit</mat-icon>
+              </button>
+              <button class="btn-edit" mat-icon-button (click)="onDelete(element._id)">
+                <mat-icon aria-label="Modifier">delete</mat-icon>
+              </button>
+
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+
+
+

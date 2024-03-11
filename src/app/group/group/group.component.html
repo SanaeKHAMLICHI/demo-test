@@ -1,0 +1,14 @@
+<div class="menu">
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button *ngFor="let group of groups" mat-menu-item [routerLink]="['/home/group', group._id]">
+      {{ group.libelle }}
+    </button>
+    <button mat-fab (click)="goToGroupCreationForm()" class="button-add" extended>
+      <mat-icon>add</mat-icon>
+      Nouveau Group
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,49 @@
+<div class="background">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ player ? 'Modifier le joueur' : 'Ajouter un nouveau joueur' }}</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content >
+      <form [formGroup]="playerForm" (ngSubmit)="player? onEdit() : onSubmit()">
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+          <mat-form-field appearance="outline">
+            <mat-label>Nom de Joeur</mat-label>
+            <input matInput formControlName="libelle" placeholder="Entrez le nom de joueur" type="text">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Le poste</mat-label>
+            <input matInput formControlName="poste" placeholder="Entrez le poste de joueur" type="text">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Nom du Club</mat-label>
+            <input matInput formControlName="clubName" placeholder="Entrez le club de joueur" type="text">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Groupe d'équipe</mat-label>
+            <mat-select formControlName="group" (selectionChange)="onGroupSelectionChange($event)">
+              <mat-option *ngFor="let group of groups" [value]="group._id">
+                {{group.libelle}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Équipe de joueur</mat-label>
+            <mat-select formControlName="team">
+              <mat-option *ngFor="let team of teams" [value]="team._id">
+                {{team.libelle}}
+              </mat-option>
+            </mat-select>
+
+          </mat-form-field>
+
+          <button mat-raised-button type="submit">Ajouter</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
