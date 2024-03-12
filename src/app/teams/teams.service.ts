@@ -22,10 +22,10 @@ export class TeamsService {
   getTeams(): Observable<TeamDto[]> {
     return this.http.get<TeamDto[]>('http://localhost:4000/api/v1/teams');
   }
-  getGroup(idGroup:String): Observable<GroupDto[]> {
+  getGroup(idGroup:string): Observable<GroupDto[]> {
     return this.http.get<GroupDto[]>(`http://localhost:4000/api/v1/groups/${idGroup}`);
   }
-  getGroupById(idGroup:String): Observable<GroupDto> {
+  getGroupById(idGroup:string): Observable<GroupDto> {
     return this.http.get<GroupDto>(`http://localhost:4000/api/v1/groups/${idGroup}`);
   }
   getTeam(idTeam: string): Observable<TeamDto> {

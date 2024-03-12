@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../auth/auth.service";
 import {MatDialog} from "@angular/material/dialog";
 import {UserService} from "./user.service";
-import {Observable, of} from "rxjs";
-import {AlertDialogComponent} from "../alert-dialog/alert-dialog.component";
+import {Observable} from "rxjs";
 import {ChangePasswordDto, UserUpdateDto} from "./model";
-import {PlayerDto} from "../players/model";
 import {UserDto} from "../auth/model";
 
 @Injectable({

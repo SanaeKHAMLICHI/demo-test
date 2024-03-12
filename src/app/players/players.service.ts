@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {NewTeamDto, TeamDto} from "../teams/model";
+import { TeamDto} from "../teams/model";
 import {Observable} from "rxjs";
 import {NewPlayerDto, PlayerDto, UpdatePlayerDto} from "./model";
-import {GroupDto} from "../group/model";
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +21,7 @@ export class PlayersService {
   getPlayers(): Observable<PlayerDto[]> {
     return this.http.get<PlayerDto[]>('http://localhost:4000/api/v1/players');
   }
-  getTeamById(idTeam:String): Observable<TeamDto> {
+  getTeamById(idTeam:string): Observable<TeamDto> {
     return this.http.get<TeamDto>(`http://localhost:4000/api/v1/teams/${idTeam}`);
   }
 

@@ -1,21 +1,17 @@
-import {Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import {FlexModule} from "@angular/flex-layout";
 import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
-import {MatOption} from "@angular/material/autocomplete";
-import {MatSelect} from "@angular/material/select";
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {Team} from "../../teams/group";
-import {TeamsService} from "../../teams/teams.service";
+
+import {FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 
 
-import {NgForOf, NgIf} from "@angular/common";
+import {NgIf} from "@angular/common";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
-import {HttpHeaders} from "@angular/common/http";
 import {GroupDto} from "../model";
 import {TeamDto} from "../../teams/model";
 import {TeamsFacadeService} from "../../teams/teams-facade.service";

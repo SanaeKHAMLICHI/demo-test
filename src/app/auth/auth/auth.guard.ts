@@ -1,4 +1,4 @@
-import {CanActivate, CanActivateFn, Router} from '@angular/router';
+import { CanActivateFn, Router} from '@angular/router';
 import {Injectable} from "@angular/core";
 
 export const authGuard: CanActivateFn = (route, state) => {

@@ -1,11 +1,6 @@
-import {Component, HostListener, inject, OnInit} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
-import {GroupService} from "../../teams/group.service";
-import {TeamsService} from "../../teams/teams.service";
-import { Team} from "../../teams/group";
-import { PlayersService} from "../../players/players.service";
 import {NgForOf} from "@angular/common";
-import { Location } from '@angular/common';
 import {MatIcon} from "@angular/material/icon";
 import {MatFabButton, MatIconButton} from "@angular/material/button";
 import {
@@ -14,11 +9,9 @@ import {
   MatHeaderCell, MatHeaderCellDef,
   MatHeaderRow, MatHeaderRowDef,
   MatRow, MatRowDef,
-  MatTable,
-  MatTableDataSource
+  MatTable
 } from "@angular/material/table";
 import {PlayerFormComponent} from "../player-form/player-form.component";
-import {TeamsFacadeService} from "../../teams/teams-facade.service";
 import {PlayersFacadeService} from "../players-facade.service";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
 import {TeamDto} from "../../teams/model";
@@ -58,9 +51,6 @@ export class PlayersComponent implements  OnInit{
   teamId: string ;
   groupId: string ;
 
-  teamsService = inject(TeamsService);
-
-
 
 
   constructor(
@@ -68,7 +58,6 @@ export class PlayersComponent implements  OnInit{
     private route: ActivatedRoute,
     private playersFacade: PlayersFacadeService,
     private dialog :Dialog,
-    private playersService : PlayersService
   ) {
     this.teamId = String(this.route.snapshot.params['idTeam']);
     this.groupId = String(this.route.snapshot.params['idGroup']);

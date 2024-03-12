@@ -1,4 +1,4 @@
-import {Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component,inject,  OnInit} from '@angular/core';
 import {FlexModule} from "@angular/flex-layout";
 import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
@@ -6,19 +6,15 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatOption} from "@angular/material/autocomplete";
 import {MatSelect} from "@angular/material/select";
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {Team} from "../../teams/group";
-import {TeamsService} from "../../teams/teams.service";
+import {FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
-import {Player, PlayersService} from "../players/players.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {PlayersFacadeService} from "../players-facade.service";
 import {TeamDto} from "../../teams/model";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
 import {PlayerDto} from "../model";
 import {TeamsFacadeService} from "../../teams/teams-facade.service";
-import {Observable} from "rxjs";
 import {GroupDto} from "../../group/model";
 import {GroupFacadeService} from "../../group/group-facade.service";
 

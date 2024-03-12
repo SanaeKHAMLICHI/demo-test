@@ -1,4 +1,3 @@
-import {GroupDto} from "../group/model";
 
 export interface UserUpdateDto {
   firstName: string;

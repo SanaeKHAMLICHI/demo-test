@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {AuthenticationDto, AuthenticationResponseDto, RegisterDto} from "./model";
-import {ChangePasswordDto} from "../profile/model";
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,6 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule} from '@angular/common/http/testing';
 
 import { GroupService } from './group.service';
-import {GroupDto} from "./model";
 
 import { TestBed } from '@angular/core/testing';
 
