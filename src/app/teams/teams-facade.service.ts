@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {TeamsService} from "./teams.service";
-import {ActivatedRoute} from "@angular/router";
-import {combineLatest, map, Observable} from "rxjs";
+import { map, Observable} from "rxjs";
 import {GroupDto} from "../group/model";
 import {TeamDto} from "./model";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";

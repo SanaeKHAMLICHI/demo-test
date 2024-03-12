@@ -4,7 +4,6 @@ import {
   MatCardActions,
   MatCardContent,
   MatCardHeader,
-  MatCardModule,
   MatCardTitle
 } from '@angular/material/card';
 import {UserDto} from "../../auth/model";

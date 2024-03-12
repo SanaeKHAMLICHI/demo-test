@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {MatFormField, MatInput, MatInputModule, MatLabel} from '@angular/material/input';
-import {MatButton, MatButtonModule} from '@angular/material/button';
-import {MatCard, MatCardContent, MatCardHeader, MatCardModule , MatCardTitle } from '@angular/material/card';
+import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatButton} from '@angular/material/button';
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import {FlexModule} from "@angular/flex-layout";
 import {Router, RouterLink} from "@angular/router";
 import {HomeComponent} from "../../home/home.component";
 import {NgIf} from "@angular/common";
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import { ReactiveFormsModule} from "@angular/forms";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
 import {AuthFormFacade} from "../auth.facade";
 

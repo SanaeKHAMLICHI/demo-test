@@ -1,6 +1,5 @@
 // group.service.ts
 import { Injectable } from '@angular/core';
-import { Team} from "./group";
 import {GroupDto} from "../group/model";
 
 @Injectable({

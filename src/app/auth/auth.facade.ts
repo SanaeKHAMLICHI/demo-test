@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import {AuthService} from "./auth.service";
 import {AlertDialogComponent} from "../alert-dialog/alert-dialog.component";

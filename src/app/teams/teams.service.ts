@@ -1,8 +1,7 @@
 // group.service.ts
 import { Injectable } from '@angular/core';
-import {Team} from "./group";
 import {Observable} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {NewTeamDto, TeamDto, UpdateTeamDto} from "./model";
 import {GroupDto, NewGroupDto} from "../group/model";
 

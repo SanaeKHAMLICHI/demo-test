@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard {
   constructor(private router: Router) {}
 
   canActivate(): boolean {

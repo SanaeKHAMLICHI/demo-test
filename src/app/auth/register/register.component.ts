@@ -1,6 +1,6 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {FlexModule} from "@angular/flex-layout";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
@@ -9,7 +9,6 @@ import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
 import {HttpClientModule} from "@angular/common/http";
-import {AuthService} from "../auth.service";
 import {AuthFormFacade} from "../auth.facade";
 import {NgIf} from "@angular/common";
 

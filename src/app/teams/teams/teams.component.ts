@@ -1,8 +1,5 @@
-import {Component, inject, Input, OnInit} from '@angular/core';
-import {Article} from "../../home/article";
-import {ArticleService} from "../../home/article.service";
-import {Team} from "../group";
-import {GroupService} from "../group.service";
+import {Component, OnInit} from '@angular/core';
+
 import {
   MatCard,
   MatCardContent,
@@ -12,9 +9,8 @@ import {
   MatCardTitle
 } from "@angular/material/card";
 import {FlexModule} from "@angular/flex-layout";
-import {Location, NgForOf} from "@angular/common";
+import { NgForOf} from "@angular/common";
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
-import {TeamsService} from "../teams.service";
 import {MatIcon} from "@angular/material/icon";
 import {MatFabButton, MatIconButton} from "@angular/material/button";
 import {

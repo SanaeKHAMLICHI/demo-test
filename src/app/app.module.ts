@@ -6,10 +6,8 @@ import { AppRoutingModule } from './app.routing';
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {AuthInterceptor} from "./auth/auth/auth-interceptor.service";
+import { HttpClientModule} from '@angular/common/http';
 import {StoreModule} from "@ngrx/store";
-import { reducer } from './reducer';
 
 
 
@@ -25,8 +23,6 @@ import { reducer } from './reducer';
     LoginComponent,
     RegisterComponent,
     HttpClientModule,
-    StoreModule.forRoot({ counter: reducer })
-
   ],
   providers: [
   ]

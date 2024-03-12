@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {Article} from "./article";
 import {ArticleService} from "./article.service";
 import {NgForOf} from "@angular/common";
@@ -9,7 +9,6 @@ import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {MatButton, MatFabButton, MatIconButton} from "@angular/material/button";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
-import {GroupService} from "../teams/group.service";
 import {Router, RouterLink} from "@angular/router";
 import {GroupDto} from "../group/model";
 import {GroupComponent} from "../group/group/group.component";

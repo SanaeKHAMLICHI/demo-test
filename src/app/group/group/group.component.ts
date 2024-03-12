@@ -1,8 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {MatButton, MatFabButton} from "@angular/material/button";
-import {Article} from "../../home/article";
-import {ArticleService} from "../../home/article.service";
 import {MatIcon} from "@angular/material/icon";
 import {GroupDto} from "../model";
 import {Router, RouterLink} from "@angular/router";

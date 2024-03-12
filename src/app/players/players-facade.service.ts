@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import {TeamsService} from "../teams/teams.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {PlayersService} from "./players.service";
 import {TeamDto} from "../teams/model";
 import {NewPlayerDto, PlayerDto} from "./model";
 import {map, Observable} from "rxjs";
-import {GroupDto} from "../group/model";
-import {Player} from "./players/players.service";
+
 
 @Injectable({
   providedIn: 'root'

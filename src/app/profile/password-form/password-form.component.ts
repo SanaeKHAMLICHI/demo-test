@@ -6,12 +6,8 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/mat
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {Router, RouterLink} from "@angular/router";
-import {PlayersFacadeService} from "../../players/players-facade.service";
-import {TeamsFacadeService} from "../../teams/teams-facade.service";
-import {GroupFacadeService} from "../../group/group-facade.service";
 import {MatDialog} from "@angular/material/dialog";
 import {UserFacadeService} from "../user-facade.service";
-import {PlayerDto} from "../../players/model";
 import {AlertDialogComponent} from "../../alert-dialog/alert-dialog.component";
 import {NgIf} from "@angular/common";
 

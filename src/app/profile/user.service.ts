@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {AuthenticationResponseDto, RegisterDto, UserDto} from "../auth/model";
+import { UserDto} from "../auth/model";
 import {Observable} from "rxjs";
 import {ChangePasswordDto, CreateUserDto, UserUpdateDto} from "./model";
 
